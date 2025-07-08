@@ -6,6 +6,8 @@
   <title>Suvhankar Dutta | Cybersecurity Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <!-- Animate.css CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <script>
     tailwind.config = {
       theme: {
@@ -17,33 +19,57 @@
       }
     };
   </script>
+  <style>
+    .perspective {
+      perspective: 1000px;
+    }
+    .skill-box {
+      @apply bg-gray-800 p-6 rounded-lg text-white font-semibold shadow-lg transition-transform duration-300 ease-in-out;
+      transform-style: preserve-3d;
+      will-change: transform;
+      border: 2px solid #00ccff;
+      box-shadow: 0 0 20px #00ccff;
+    }
+    .skill-box:hover {
+      box-shadow: 0 0 40px #00ccff, 0 0 60px #00ccff;
+    }
+    .project-card {
+      @apply bg-gray-800 p-5 rounded shadow transition duration-300 transform hover:scale-105;
+      border: 1px solid #00ccff;
+      box-shadow: 0 0 15px #00ccff;
+    }
+    .project-card:hover {
+      box-shadow: 0 0 30px #00ccff, 0 0 50px #00ccff;
+    }
+  </style>
 </head>
 <body class="bg-gradient-to-br from-gray-900 to-black text-white font-tech scroll-smooth">
 
   <!-- Navbar -->
-  <nav class="fixed top-0 w-full z-50 bg-black bg-opacity-80 p-5 flex justify-between items-center shadow-lg">
-    <h1 class="text-xl sm:text-2xl font-bold text-cyan-400">Suvhankar Dutta</h1>
-    <div class="space-x-5 text-sm sm:text-base">
-      <a href="#about" class="hover:text-cyan-300">About</a>
-      <a href="#skills" class="hover:text-cyan-300">Skills</a>
-      <a href="#certifications" class="hover:text-cyan-300">Certifications</a>
-      <a href="#projects" class="hover:text-cyan-300">Experience</a>
-      <a href="#contact" class="hover:text-cyan-300">Contact</a>
+  <nav class="animate__animated animate__fadeInDown fixed top-0 w-full z-50 bg-black bg-opacity-80 p-5 flex justify-between items-center shadow-lg">
+    <h1 class="text-xl sm:text-2xl font-bold text-blue-400">Suvhankar Dutta</h1>
+    <div class="space-x-4 text-sm sm:text-base">
+      <a href="#about" class="hover:text-blue-300">About</a>
+      <a href="#skills" class="hover:text-blue-300">Skills</a>
+      <a href="#projects" class="hover:text-blue-300">Projects</a>
+      <a href="#certifications" class="hover:text-blue-300">Certifications</a>
+      <a href="#contact" class="hover:text-blue-300">Contact</a>
     </div>
   </nav>
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="h-screen flex items-center justify-center text-center px-5 pt-20">
-    <div>
-      <img src="profile.jpg" alt="Suvhankar Dutta" class="mx-auto w-40 h-40 rounded-full border-4 border-cyan-400 shadow-lg shadow-cyan-500/40 hover:scale-105 transition duration-300"/>
-      <h2 class="text-4xl sm:text-6xl font-bold text-cyan-400 mt-6">Cybersecurity | AI | Cloud</h2>
-      <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-300">
+    <div class="animate__animated animate__fadeInDown">
+      <img src="profile.jpg" alt="Suvhankar Dutta"
+           class="mx-auto w-40 h-40 rounded-full border-4 border-blue-400 shadow-lg shadow-blue-500/40 hover:scale-105 transition duration-300"/>
+      <h2 class="text-4xl sm:text-6xl font-bold text-blue-400 mt-6 animate__animated animate__fadeInUp animate__delay-1s">Cybersecurity | AI | Cloud</h2>
+      <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-300 animate__animated animate__fadeInUp animate__delay-2s">
         I'm a Cybersecurity & Data Analyst enthusiast skilled in System Defense, Python, and AI. Let's secure the future together.
       </p>
-      <div class="mt-6 space-x-4">
-        <a href="mailto:duttasuvhankar@gmail.com" class="bg-cyan-500 px-6 py-2 rounded hover:bg-cyan-600">Hire Me</a>
-        <a href="Suvhankar_Dutta_Resume.pdf" download class="bg-gray-800 px-6 py-2 rounded hover:bg-gray-700 border border-cyan-500 text-cyan-300">Download Resume</a>
-        <a href="https://in.linkedin.com/in/suvhankar-dutta-7890912aa" target="_blank" class="underline text-cyan-400">LinkedIn</a>
+      <div class="mt-6 space-x-4 animate__animated animate__fadeInUp animate__delay-3s">
+        <a href="mailto:duttasuvhankar@gmail.com" class="bg-blue-500 px-6 py-2 rounded hover:bg-blue-600">Hire Me</a>
+        <a href="Suvhankar_Dutta_Resume.pdf" download class="bg-gray-800 px-6 py-2 rounded hover:bg-gray-700 border border-blue-500 text-blue-300">Download Resume</a>
+        <a href="https://github.com/Subhoisalive" target="_blank" class="underline text-blue-400">GitHub</a>
       </div>
     </div>
   </section>
@@ -59,20 +85,75 @@
   <!-- Skills -->
   <section id="skills" class="p-10 bg-gray-950">
     <h3 class="text-3xl font-semibold mb-6">Skills</h3>
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
-      <div class="bg-gray-800 p-4 rounded">Cybersecurity</div>
-      <div class="bg-gray-800 p-4 rounded">System Defense</div>
-      <div class="bg-gray-800 p-4 rounded">Python</div>
-      <div class="bg-gray-800 p-4 rounded">Data Analysis</div>
-      <div class="bg-gray-800 p-4 rounded">Visualization</div>
-      <div class="bg-gray-800 p-4 rounded">Cryptography</div>
-      <div class="bg-gray-800 p-4 rounded">Cloud (AWS)</div>
-      <div class="bg-gray-800 p-4 rounded">AI (IBM)</div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 text-center group perspective">
+      <div class="skill-box">Cybersecurity</div>
+      <div class="skill-box">System Defense</div>
+      <div class="skill-box">Python</div>
+      <div class="skill-box">Data Analysis</div>
+      <div class="skill-box">Visualization</div>
+      <div class="skill-box">Cryptography</div>
+      <div class="skill-box">Cloud (AWS)</div>
+      <div class="skill-box">AI (IBM)</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="p-10 bg-gray-900">
+    <h3 class="text-3xl font-semibold mb-6">Projects</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-gray-300">
+      <div class="project-card">
+        🌙 <strong>Astrology Zodiac Project</strong><br/>
+        A Python tool for zodiac predictions.
+        <div class="mt-3">
+          <a href="https://github.com/Subhoisalive/Astro_Zodiac_Project" target="_blank"
+             class="inline-block px-4 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-full">GitHub Repo</a>
+        </div>
+      </div>
+      <div class="project-card">
+        🎙️ <strong>Jarvis Voice Assistant</strong><br/>
+        AI-powered voice command assistant.
+        <div class="mt-3">
+          <a href="https://github.com/Subhoisalive/Jarvis-Voice-Assistant" target="_blank"
+             class="inline-block px-4 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-full">GitHub Repo</a>
+        </div>
+      </div>
+      <div class="project-card">
+        ✋ <strong>Hand Gesture Volume Control</strong><br/>
+        Control volume using hand gestures.
+        <div class="mt-3">
+          <a href="https://github.com/Subhoisalive/Volume-Control-project" target="_blank"
+             class="inline-block px-4 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-full">GitHub Repo</a>
+        </div>
+      </div>
+      <div class="project-card">
+        🔐 <strong>Password Strength Checker</strong><br/>
+        Password strength detection with real-time feedback.
+        <div class="mt-3">
+          <a href="https://github.com/Subhoisalive/Codes-for-V" target="_blank"
+             class="inline-block px-4 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-full">GitHub Repo</a>
+        </div>
+      </div>
+      <div class="project-card">
+        🌐 <strong>Personal Portfolio Page</strong><br/>
+        This very website built with TailwindCSS & JS.
+        <div class="mt-3">
+          <a href="https://github.com/Subhoisalive/Subh_P_Portfolio" target="_blank"
+             class="inline-block px-4 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-full">GitHub Repo</a>
+        </div>
+      </div>
+      <div class="project-card">
+        🧱 <strong>Hand Gesture Brick Game</strong><br/>
+        Arcade-style brick breaker using hand gestures.
+        <div class="mt-3">
+          <a href="https://github.com/Subhoisalive/Brick_Game" target="_blank"
+             class="inline-block px-4 py-1 bg-blue-600 hover:bg-blue-700 text-white text-sm rounded-full">GitHub Repo</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Certifications -->
-  <section id="certifications" class="p-10 bg-gray-900">
+  <section id="certifications" class="p-10 bg-gray-950">
     <h3 class="text-3xl font-semibold mb-6">Certifications</h3>
     <ul class="list-disc list-inside text-gray-300 space-y-2">
       <li>Fortinet Certified Associate Cybersecurity</li>
@@ -84,33 +165,36 @@
     </ul>
   </section>
 
-  <!-- Experience -->
-  <section id="projects" class="p-10 bg-gray-950">
-    <h3 class="text-3xl font-semibold mb-4">Experience & Volunteering</h3>
-    <ul class="space-y-4 text-gray-300">
-      <li>
-        <strong>Volunteer – Analytic Global Conference 2024 & 2025</strong><br />
-        Assisted with organizing cybersecurity and analytics events at NSHM, Kolkata.
-      </li>
-      <li>
-        <strong>Volunteer – Blood Donation Camp</strong><br />
-        Supported logistics and outreach in a social initiative.
-      </li>
-    </ul>
-  </section>
-
   <!-- Contact -->
   <section id="contact" class="p-10 bg-gray-900">
     <h3 class="text-3xl font-semibold mb-6">Contact Me</h3>
     <p class="text-gray-300 mb-2">📞 9674979079</p>
     <p class="text-gray-300 mb-2">📧 duttasuvhankar@gmail.com</p>
-    <p class="text-gray-300">🌐 <a href="https://in.linkedin.com/in/suvhankar-dutta-7890912aa" target="_blank" class="text-cyan-400 underline">LinkedIn Profile</a></p>
+    <p class="text-gray-300">🌐 <a href="https://github.com/Subhoisalive" target="_blank" class="text-blue-400 underline">GitHub Profile</a></p>
   </section>
 
   <!-- Footer -->
   <footer class="bg-black text-gray-400 text-center py-4 mt-10">
-    &copy; 2025 Suvhankar Dutta | Built with Love and Ethusiasm
-    <br />
+    &copy; 2025 Suvhankar Dutta | Built with Love and Enthusiasm
   </footer>
+
+  <!-- Hover Tilt Script -->
+  <script>
+    document.querySelectorAll('.skill-box').forEach((box) => {
+      box.addEventListener('mousemove', (e) => {
+        const rect = box.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / 8;
+        const rotateY = (x - centerX) / 8;
+        box.style.transform = `rotateX(${-rotateX}deg) rotateY(${rotateY}deg)`;
+      });
+      box.addEventListener('mouseleave', () => {
+        box.style.transform = 'rotateX(0) rotateY(0)';
+      });
+    });
+  </script>
 </body>
 </html>
