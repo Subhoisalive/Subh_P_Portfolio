@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Suvhankar Dutta | Cybersecurity Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            tech: ['Orbitron', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white font-tech scroll-smooth">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 bg-black bg-opacity-80 p-5 flex justify-between items-center shadow-lg">
+    <h1 class="text-xl sm:text-2xl font-bold text-cyan-400">Suvhankar Dutta</h1>
+    <div class="space-x-5 text-sm sm:text-base">
+      <a href="#about" class="hover:text-cyan-300">About</a>
+      <a href="#skills" class="hover:text-cyan-300">Skills</a>
+      <a href="#certifications" class="hover:text-cyan-300">Certifications</a>
+      <a href="#projects" class="hover:text-cyan-300">Experience</a>
+      <a href="#contact" class="hover:text-cyan-300">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="h-screen flex items-center justify-center text-center px-5 pt-20">
+    <div>
+      <img src="profile.jpg" alt="Suvhankar Dutta" class="mx-auto w-40 h-40 rounded-full border-4 border-cyan-400 shadow-lg shadow-cyan-500/40 hover:scale-105 transition duration-300"/>
+      <h2 class="text-4xl sm:text-6xl font-bold text-cyan-400 mt-6">Cybersecurity | AI | Cloud</h2>
+      <p class="mt-4 text-lg max-w-2xl mx-auto text-gray-300">
+        I'm a Cybersecurity & Data Analyst enthusiast skilled in System Defense, Python, and AI. Let's secure the future together.
+      </p>
+      <div class="mt-6 space-x-4">
+        <a href="mailto:duttasuvhankar@gmail.com" class="bg-cyan-500 px-6 py-2 rounded hover:bg-cyan-600">Hire Me</a>
+        <a href="Suvhankar_Dutta_Resume.pdf" download class="bg-gray-800 px-6 py-2 rounded hover:bg-gray-700 border border-cyan-500 text-cyan-300">Download Resume</a>
+        <a href="https://in.linkedin.com/in/suvhankar-dutta-7890912aa" target="_blank" class="underline text-cyan-400">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="p-10 bg-gray-900">
+    <h3 class="text-3xl font-semibold mb-4">About Me</h3>
+    <p class="max-w-3xl text-gray-300">
+      B.Sc. Cybersecurity student at NSHM, Kolkata. Passionate about Cyber Defense, AI, and Cloud. Certified by Fortinet, AWS, IBM, Alteryx. Experienced with Python, Linux (Kali, Parrot, Ubuntu), and real-world job simulations from Deloitte via Forage.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="p-10 bg-gray-950">
+    <h3 class="text-3xl font-semibold mb-6">Skills</h3>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
+      <div class="bg-gray-800 p-4 rounded">Cybersecurity</div>
+      <div class="bg-gray-800 p-4 rounded">System Defense</div>
+      <div class="bg-gray-800 p-4 rounded">Python</div>
+      <div class="bg-gray-800 p-4 rounded">Data Analysis</div>
+      <div class="bg-gray-800 p-4 rounded">Visualization</div>
+      <div class="bg-gray-800 p-4 rounded">Cryptography</div>
+      <div class="bg-gray-800 p-4 rounded">Cloud (AWS)</div>
+      <div class="bg-gray-800 p-4 rounded">AI (IBM)</div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="p-10 bg-gray-900">
+    <h3 class="text-3xl font-semibold mb-6">Certifications</h3>
+    <ul class="list-disc list-inside text-gray-300 space-y-2">
+      <li>Fortinet Certified Associate Cybersecurity</li>
+      <li>Fortinet FortiGate 7.4 Operator</li>
+      <li>Alteryx Designer Core & Foundational Micro-Credential</li>
+      <li>AWS Academy Cloud Foundations</li>
+      <li>IBM Python & Data Science Specialization</li>
+      <li>Deloitte Cybersecurity, Tech & Data Analytics Job Simulations</li>
+    </ul>
+  </section>
+
+  <!-- Experience -->
+  <section id="projects" class="p-10 bg-gray-950">
+    <h3 class="text-3xl font-semibold mb-4">Experience & Volunteering</h3>
+    <ul class="space-y-4 text-gray-300">
+      <li>
+        <strong>Volunteer – Analytic Global Conference 2024 & 2025</strong><br />
+        Assisted with organizing cybersecurity and analytics events at NSHM, Kolkata.
+      </li>
+      <li>
+        <strong>Volunteer – Blood Donation Camp</strong><br />
+        Supported logistics and outreach in a social initiative.
+      </li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="p-10 bg-gray-900">
+    <h3 class="text-3xl font-semibold mb-6">Contact Me</h3>
+    <p class="text-gray-300 mb-2">📞 9674979079</p>
+    <p class="text-gray-300 mb-2">📧 duttasuvhankar@gmail.com</p>
+    <p class="text-gray-300">🌐 <a href="https://in.linkedin.com/in/suvhankar-dutta-7890912aa" target="_blank" class="text-cyan-400 underline">LinkedIn Profile</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 text-center py-4 mt-10">
+    &copy; 2025 Suvhankar Dutta | Built with Love and Ethusiasm
+    <br />
+  </footer>
+</body>
+</html>
