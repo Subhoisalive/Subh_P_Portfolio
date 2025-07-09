@@ -23,19 +23,32 @@
       perspective: 1000px;
     }
     .skill-box {
-      @apply bg-gray-800 p-6 rounded-lg text-white font-semibold shadow-lg transition-transform duration-300 ease-in-out;
+      background-color: #2d3748; /* bg-gray-800 */
+      padding: 1.5rem; /* p-6 */
+      border-radius: 0.5rem; /* rounded-lg */
+      color: #fff; /* text-white */
+      font-weight: 600; /* font-semibold */
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06), 0 0 20px #00ccff;
+      transition: transform 0.3s, box-shadow 0.3s;
       transform-style: preserve-3d;
       will-change: transform;
       border: 2px solid #00ccff;
-      box-shadow: 0 0 20px #00ccff;
     }
     .skill-box:hover {
       box-shadow: 0 0 40px #00ccff, 0 0 60px #00ccff;
     }
     .project-card {
-      @apply bg-gray-800 p-5 rounded shadow transition duration-300 transform hover:scale-105;
+      background-color: #2d3748; /* bg-gray-800 */
+      padding: 1.25rem; /* p-5 */
+      border-radius: 0.5rem; /* rounded */
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.06), 0 0 15px #00ccff;
       border: 1px solid #00ccff;
-      box-shadow: 0 0 15px #00ccff;
+      transition: box-shadow 0.3s, transform 0.3s;
+      transform: none;
+    }
+    .project-card:hover {
+      box-shadow: 0 0 30px #00ccff, 0 0 50px #00ccff;
+      transform: scale(1.05);
     }
     .project-card:hover {
       box-shadow: 0 0 30px #00ccff, 0 0 50px #00ccff;
